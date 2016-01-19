@@ -32,4 +32,36 @@ public class Transaction {
      */
     private Account inAccount;
     
+    /**
+     * Transaction constructor
+     * @param amount        the size of the transaction
+     * @param inAccount     the account from where the transaction originates
+     */
+    public Transaction(double amount, Account inAccount){
+        
+        //set values
+        this.amount = amount;
+        this.inAccount = inAccount;
+        this.timestamp = new Date();
+        this.memo = "";
+        
+    }
+    
+    /**
+     * Second of the overloaded Transaction constructors
+     * @param amount    size of transaction
+     * @param memo      note from user
+     * @param inAccount user's account
+     */
+    public Transaction(double amount, String memo, Account inAccount){
+        
+        //call the first constructor
+        this(amount, inAccount);
+        
+        //fill in the missing piece from the first constructor
+        this.memo = memo;
+        
+        
+    }
+    
 }

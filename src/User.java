@@ -48,7 +48,7 @@ public class User {
      * @param pin       We'll use a MD5 MessageDigest to process
      * @param theBank   Need the bank so we can call it's methods
      */
-    public void User(String firstName, String lastName, String pin,
+    public User(String firstName, String lastName, String pin,
             Bank theBank){
         
         this.firstName = firstName;
